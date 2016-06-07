@@ -11,7 +11,12 @@ function start()
     if ($x === '1') {
       print "FizzBuzzなんだから整数を入力しなさいよね！！\n";
       $x2 = trim(fgets(STDIN));
-      if ($x2 % 15 === 0) {
+      if ($x2 === '0') {
+        print "$x2\n";
+        $array[] = $x2;
+        $array[] = "$x2\n";
+      }
+      else if ($x2 % 15 === 0) {
         print "FizzBuzz\n";
         $array[] = $x2;
         $array[] = "FizzBuzz\n";
