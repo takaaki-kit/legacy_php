@@ -14,28 +14,28 @@ function start()
       if ($x2 % 15 === 0) {
         print "FizzBuzz\n";
         $array[] = $x2;
-        $array[] = "FizzBuzz";
+        $array[] = "FizzBuzz\n";
       }
       else if ($x2 % 5 === 0) {
         $array[] = $x2;
         print "Buzz\n";
-        $array[] = "Buzz";
+        $array[] = "Buzz\n";
       }
       else if ($x2 % 3 === 0) {
         $array[] = $x2;
-        $array[] = "Fizz";
+        $array[] = "Fizz\n";
         print "Fizz\n";
       }
       else {
         print "$x2\n";
         $array[] = $x2;
-        $array[] = "$x2";
+        $array[] = "$x2\n";
       }
     }
     else if ($x === '2') {
       for ($i = 0; $i < sizeof($array); $i += 2) {
         $j = $i + 1;
-        print "$array[$i] : $array[$j]\n";
+        print "$array[$i] : $array[$j]";
       }
     }
     else if ($x === '0') {
