@@ -15,6 +15,7 @@ class File
         $str = $str.FizzBuzz::$array[$i];
       }
     }
+    $str = $str.",";
     return fwrite($file, $str);
   }
 
