@@ -10,12 +10,15 @@ class FizzBuzz
   {
     while(true) {
       print "好きなモードをえらんでねはぁと\n";
-      print "モードがわからんとか言うな\n";
+      print "1 -> FizzBuzzで遊ぶ\n";
+      print "2 -> 今回の履歴を表示\n";
+      print "3 -> 今回の履歴を保存\n";
+      print "4 -> 保存した履歴を表示\n";
       $x = trim(fgets(STDIN));
       if($x === '1') {
         print "FizzBuzzなんだから整数を入力しなさいよね！！\n";
         $x2 = trim(fgets(STDIN));
-        if(FizzBuzz::fizzbuzzCheckNum($x)) {
+        if(FizzBuzz::fizzbuzzCheckNum($x2)) {
           if($x2 === '0') {
             print "$x2\n";
             $array[] = $x2;
