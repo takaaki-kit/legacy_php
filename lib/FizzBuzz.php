@@ -18,40 +18,39 @@ class FizzBuzz
       if($x === '1') {
         print "FizzBuzzなんだから整数を入力しなさいよね！！\n";
         $x2 = trim(fgets(STDIN));
-        if(FizzBuzz::fizzbuzzCheckNum($x2)) {
+        if(self::fizzbuzzCheckNum($x2)) {
           if($x2 === '0') {
             print "$x2\n";
-            $array[] = $x2;
-            $array[] = "$x2\n";
+            self::$array[] = $x2;
+            self::$array[] = "$x2\n";
           }
           else if($x2 % 15 === 0) {
             print "FizzBuzz\n";
-            $array[] = $x2;
-            $array[] = "FizzBuzz\n";
+            self::$array[] = $x2;
+            self::$array[] = "FizzBuzz\n";
           }
           else if($x2 % 5 === 0) {
-            $array[] = $x2;
+            self::$array[] = $x2;
             print "Buzz\n";
-            $array[] = "Buzz\n";
+            self::$array[] = "Buzz\n";
           }
           else if($x2 % 3 === 0) {
-            $array[] = $x2;
-            $array[] = "Fizz\n";
+            self::$array[] = $x2;
+            self::$array[] = "Fizz\n";
             print "Fizz\n";
           }
           else {
             print "$x2\n";
-            $array[] = $x2;
-            $array[] = "$x2\n";
+            self::$array[] = $x2;
+            self::$array[] = "$x2\n";
           }
         }
       }
       else if($x === '2') {
-        for($i = 0; $i < sizeof($array); $i += 2) {
-          $j = $i + 1;
-          print "$array[$i] ";
-          print ":";
-          print "$array[$j]";
+        for($i = 0; $i < sizeof(self::$array); $i += 2) {
+          print self::$array[$i];
+          print " : ";
+          print self::$array[$i+1];
         }
       } else if($x === '3') { // 履歴保存
         $file = fopen('data.txt', 'w');

@@ -6,13 +6,13 @@ class File
 {
   public static function write($file) {
     $str = '';
-    for ($i = 0; $i < sizeof(FizzBuzz::array); $i++) {
+    for ($i = 0; $i < sizeof(FizzBuzz::$array); $i++) {
       if($i % 2 === 0) {
-        $str = $str."FizzBuzz::array[$i]";
+        $str = $str.FizzBuzz::$array[$i];
         $str = $str.",";
       }
       if($i % 2 === 1) {
-        $str = $str."FizzBuzz::array[$i]";
+        $str = $str.FizzBuzz::$array[$i];
       }
     }
     return fwrite($file, $str);
@@ -20,12 +20,13 @@ class File
 
   public static function read($file) {
     $data = fread($file, 255);
-    $datas = split(',', $data);
+    echo $data;
+    $datas = preg_split(',', $data);
     for($i = 0; $i < sizeof($datas); $i++) {
       if($i === 0) {
-        echo "datas[$i]";
+        echo "$datas[$i]";
       } else {
-        echo " : datas[$i]";
+        echo " : $datas[$i]";
       }
     }
   }
