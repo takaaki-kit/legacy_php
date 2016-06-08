@@ -2,4 +2,4 @@
 
 require('FizzBuzz.php');
 
-FizzBuzz::start();
+FizzBuzz::func();

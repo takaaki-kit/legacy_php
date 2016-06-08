@@ -4,7 +4,7 @@ require_once('FizzBuzz.php');
 
 class File
 {
-  public static function write($file) {
+  public static function write($f) {
     $str = '';
     for ($i = 0; $i < sizeof(FizzBuzz::$array); $i++) {
       if($i % 2 === 0) {
@@ -15,12 +15,16 @@ class File
         $str = $str.FizzBuzz::$array[$i];
       }
     }
-    return fwrite($file, $str);
+    print "ほぞんしますた\n";
+    return fwrite($f, $str);
   }
 
-  public static function read($file) {
-    $data = fread($file, 255);
+  public static function read($f) {
+    $data = fread($f, 255);
     $datas = explode(',', $data);
+    if ($datas[0] === '') {
+      echo "からっぽだお\n";
+    }
     for($i = 0; $i < sizeof($datas); $i++) {
       if($i === 0) {
         echo "$datas[$i]";
