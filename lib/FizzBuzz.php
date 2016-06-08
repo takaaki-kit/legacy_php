@@ -15,7 +15,7 @@ class FizzBuzz
       if($x === '1') {
         print "FizzBuzzなんだから整数を入力しなさいよね！！\n";
         $x2 = trim(fgets(STDIN));
-        if(checkFizzBuzz($x)) {
+        if(FizzBuzz::fizzbuzzCheckNum($x)) {
           if($x2 === '0') {
             print "$x2\n";
             $array[] = $x2;
@@ -70,7 +70,7 @@ class FizzBuzz
   }
 
   /* 整数チェック用 */
-  private static function checkFizzBuzz($x)
+  private static function fizzbuzzCheckNum($x)
   {
     if ($x === '0') {
       return true;

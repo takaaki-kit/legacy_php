@@ -1,6 +1,6 @@
 <?php
 
-require('FizzBuzz.php');
+require_once('FizzBuzz.php');
 
 class File
 {
