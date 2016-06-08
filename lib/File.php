@@ -9,20 +9,18 @@ class File
     for ($i = 0; $i < sizeof(FizzBuzz::$array); $i++) {
       if($i % 2 === 0) {
         $str = $str.FizzBuzz::$array[$i];
-        $str = $str.",";
+        $str = $str.',';
       }
       if($i % 2 === 1) {
         $str = $str.FizzBuzz::$array[$i];
       }
     }
-    $str = $str.",";
     return fwrite($file, $str);
   }
 
   public static function read($file) {
     $data = fread($file, 255);
-    echo $data;
-    $datas = preg_split(',', $data);
+    $datas = explode(',', $data);
     for($i = 0; $i < sizeof($datas); $i++) {
       if($i === 0) {
         echo "$datas[$i]";

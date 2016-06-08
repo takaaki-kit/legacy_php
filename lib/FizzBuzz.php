@@ -57,9 +57,12 @@ class FizzBuzz
         File::write($file); // arrayの中身をファイルに書き出す
         fclose($file);
       } else if($x === '4') { // 履歴出力
-        $file = fopen('data.txt', 'w+');
-        File::read($file); // ファイル出力用関数
-        fclose($file);
+        if ($file = @fopen('data.txt', 'r')) { ;
+          File::read($file); // ファイル出力用関数
+          fclose($file);
+        } else {
+          echo "からっぽだお\n";
+        }
       }
       else if($x === '0') {
          break;
