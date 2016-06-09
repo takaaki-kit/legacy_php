@@ -14,6 +14,7 @@ class FizzBuzz
       print "2 -> 今回の履歴を表示\n";
       print "3 -> 今回の履歴を保存\n";
       print "4 -> 保存した履歴を表示\n";
+      print "0 -> 終了\n";
       $x = trim(fgets(STDIN));
       if($x === '1') {
         print "FizzBuzzなんだから整数を入力しなさいよね！！\n";
