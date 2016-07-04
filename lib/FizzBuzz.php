@@ -78,13 +78,11 @@ class FizzBuzz
   /* 整数チェック用 */
   private static function fizzbuzzCheckNum($x)
   {
-    if ($x === '0') {
+    if (preg_match('/^\d+$/', $x)) {
       return true;
-    } else if (intval($x) === 0) {
+    } else {
       print "それは整数じゃないお！！\n";
       return false;
-    } else {
-      return true;
     }
   }
 }
