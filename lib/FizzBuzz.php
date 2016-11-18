@@ -9,7 +9,7 @@ class FizzBuzz
   public static function func()
   {
     while(true) {
-      print "好きなモードをえらんでねはぁと\n";
+      print "好きなうんこをえらんでねはぁと\n";
       print "1 -> FizzBuzzで遊ぶ\n";
       print "2 -> 今回の履歴を表示\n";
       print "3 -> 今回の履歴を保存\n";
